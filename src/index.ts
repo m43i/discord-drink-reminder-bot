@@ -8,6 +8,7 @@ import {
 import cron from 'node-cron';
 import * as dotenv from 'dotenv';
 
+console.log(process.env);
 dotenv.config();
 
 const MESSAGES = [
@@ -82,6 +83,7 @@ const getChannels = async (
  * Main method
  */
 const main = async () => {
+    console.log(process.env);
     const client = await setupClient();
 
     cron.schedule('*/10 * * * * *', async () => {
