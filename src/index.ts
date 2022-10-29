@@ -84,7 +84,7 @@ const getChannels = async (
 const main = async () => {
     const client = await setupClient();
 
-    cron.schedule('*/10 * * * * *', async () => {
+    cron.schedule('*/60 * * * *', async () => {
         const { textChannels, voiceChannels } = await getChannels(client);
 
         const users: GuildMember[] = [];
